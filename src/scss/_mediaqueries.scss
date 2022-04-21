@@ -1,0 +1,126 @@
+@import "mixins";
+
+
+@include mobile {
+
+    #drive {
+
+        & h1 {
+            font-size: 2.8rem;
+        }
+
+    }
+
+    #capabilities {
+        display: none;
+    }
+
+#capabilities-mobile {
+    display: block;
+    margin: 40px 0;
+
+    & .inner {
+        max-width: 1400px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    & .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & h2 {
+            font-size: 2em;
+        }
+
+        & button {
+            color: $purple;
+            font-size: 2em;
+            border: 0;
+            background: transparent;
+        }
+    }
+
+    & .service {
+        display: flex;
+
+        & .media {
+            flex: 1 0 50%;
+
+            & img {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        & .copy {
+            padding: 0 20px;
+            flex: 1 0 50%;
+
+            & h3 {
+                font-size: 2em;
+            }
+
+            & p {
+                font-size: 1em;
+                line-height: 1.5em;
+                padding: 0 0 20px 0;
+
+                &.is-link {
+                    font-size: 0.8em;
+                }
+            }
+        }
+    }
+
+    & .slick-prev {}
+
+    & .slick-next {}
+
+
+
+}
+
+// Offers 
+
+    
+#offers {
+
+    & .item {
+        flex: 1 0 100%;
+    }
+}
+
+
+
+}
+
+
+
+
+@media only screen and (max-width: 750px) {
+    .inner {
+        padding: 10px;
+    }
+
+    #welcome {
+        & .intro {
+            margin: 0;
+        }
+
+    }
+    
+    #newest {
+        flex-wrap: wrap;
+    }
+    
+    
+    .article {
+        flex-basis: 50%;
+    }
+
+
+
+
+}

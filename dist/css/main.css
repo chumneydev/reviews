@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+* {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  background: #ecf5fb;
+}
+
+#app {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+header {
+  padding: 40px;
+  min-height: 600px;
+  background: #3b42e5;
+  position: relative;
+}
+
+#logo {
+  width: 100%;
+}
+#logo img {
+  max-width: 10%;
+}
+
+#intro {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#copy {
+  color: #FFFFFF;
+  flex: 0 0 40%;
+}
+#copy p {
+  line-height: 1.6rem;
+}
+
+#circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+#circles .accent {
+  color: #ecf5fb;
+  position: absolute;
+  top: 80vh;
+  left: 45vw;
+  width: 10px;
+  height: 10px;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  animation: cube 12s ease-in forwards infinite;
+}
+#circles .accent:nth-child(2n) {
+  color: #0051f4;
+}
+#circles .accent:nth-child(2) {
+  display: none;
+  animation-delay: 2s;
+  left: 45vw;
+  top: 20vh;
+}
+#circles .accent:nth-child(3) {
+  animation-delay: 4s;
+  left: 75vw;
+  top: 50vh;
+}
+#circles .accent:nth-child(4) {
+  animation-delay: 6s;
+  left: 90vw;
+  top: 10vh;
+}
+#circles .accent:nth-child(5) {
+  animation-delay: 8s;
+  left: 10vw;
+  top: 45vh;
+}
+#circles .accent:nth-child(6) {
+  animation-delay: 10s;
+  left: 50vw;
+  top: 10vh;
+}
+
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+#about {
+  flex: 0 0 40%;
+  position: relative;
+  background: #FFFFFF;
+  color: #3b42e5;
+  text-align: center;
+  z-index: 2;
+  padding: 20px 0;
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px -4px rgba(65, 65, 65, 0.48);
+  z-index: 1;
+}
+#about h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+#about p {
+  font-size: 1.2rem;
+}
+#about .icon {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  padding: 0 10px;
+  font-size: 3rem;
+  background: #3b42e5;
+  color: #FFFFFF;
+  border-radius: 10px;
+}
+#about #actions {
+  display: flex;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
+  justify-content: space-between;
+  background: #cee0ec;
+  width: 60%;
+  padding: 20px 40px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: inset 0px 5px 10px -4px rgba(65, 65, 65, 0.48);
+}
+#about #actions a {
+  color: #3b42e5;
+  text-decoration: none;
+}
+#about #actions p {
+  margin: 0;
+  font-size: 2rem;
+}
+
+#main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 40px 0;
+}
+
+#experience {
+  bottom: -15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  max-width: 1200px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 40px;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
+}
+#experience h2 {
+  color: #3b42e5;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 0 0 20px 0;
+  margin: 0;
+}
+#experience .fa-star-sharp {
+  font-size: 2.5rem;
+  padding: 0 20px;
+  color: #cee0ec;
+}
+
+#services {
+  flex: 1 0 60%;
+  padding: 40px 40px;
+  margin: 10% 0 0 0;
+  display: flex;
+  gap: 40px;
+  justify-content: space-around;
+  background: #cee0ec;
+  border-radius: 20px;
+}
+#services .service {
+  text-align: center;
+  color: #cee0ec;
+  background: #FFFFFF;
+  padding: 20px;
+  border-radius: 20px;
+  transition: all 0.6s ease;
+}
+#services .service:hover {
+  color: #3b42e5;
+  box-shadow: 0px 5px 10px -4px rgba(59, 66, 229, 0.48);
+}
+#services .service .brand {
+  font-size: 8rem;
+}
+#services .service p {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+#feedback {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 40px 40px;
+  margin: 0 0 20% 0;
+}
+#feedback #feedback-about {
+  padding: 40px 40px;
+  flex: 0 0 53%;
+  background: #FFFFFF;
+  border-radius: 20px;
+}
+#feedback #feedback-about h2 {
+  text-align: center;
+  color: #3b42e5;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 0 0 20px 0;
+  margin: 0 0 40px 0;
+}
+#feedback #feedback-about #feedback-form {
+  position: relative;
+}
+#feedback #feedback-about #feedback-form fieldset {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border: 0;
+  position: relative;
+}
+#feedback #feedback-about #feedback-form fieldset:not(:first-of-type) {
+  display: none;
+}
+#feedback #feedback-about #feedback-form .button {
+  margin: 40px 0 0 0;
+  background: #3b42e5;
+  color: #FFFFFF;
+  border: 0;
+  padding: 10px 0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 100%;
+  letter-spacing: 0.75rem;
+  box-shadow: 0px 5px 10px -4px rgba(59, 66, 229, 0.48);
+  transition: all 0.6s ease;
+}
+#feedback #feedback-about #feedback-form .button:hover {
+  box-shadow: none;
+}
+#feedback #feedback-about #feedback-form input, #feedback #feedback-about #feedback-form textarea {
+  font-size: 1.5rem;
+  border: 0;
+  border-bottom: 2px solid #3b42e5;
+  background: transparent;
+  outline: 0;
+  padding: 0.25rem 0;
+  letter-spacing: 0.125rem;
+  transition: all 0.6s ease;
+}
+#feedback #feedback-about #feedback-form input:hover, #feedback #feedback-about #feedback-form textarea:hover {
+  box-shadow: 0px 5px 10px -4px rgba(59, 66, 229, 0.48);
+}
+#feedback #feedback-about #feedback-form input:focus, #feedback #feedback-about #feedback-form textarea:focus {
+  box-shadow: 0px 5px 10px -4px rgba(59, 66, 229, 0.48);
+}
+#feedback #feedback-about #feedback-form input::placeholder, #feedback #feedback-about #feedback-form textarea::placeholder {
+  color: #cee0ec;
+}
+#feedback #feedback-about #feedback-form input::selection, #feedback #feedback-about #feedback-form textarea::selection {
+  background: rgba(59, 66, 229, 0.25);
+}
+#feedback #feedback-about #feedback-form label {
+  opacity: 1;
+  font-size: 1.5rem;
+  transform: translate(0%, -250%);
+}
