@@ -42,7 +42,7 @@
 	   
 			<!-- actions -->
 			<div id="actions">
-				<p><a href="#"><i class="fa-solid fa-address-card"></i></a></p>
+				<p><a href="#"><i class="fa-solid fa-phone"></i></a></p>
 				<p>|</p>
 				<p><a href="#"><i class="fa-solid fa-car"></i></a></p>
 				<p>|</p>
@@ -282,7 +282,7 @@ $(".next").click(function(e){
 		//this comes from the custom easing plugin
 		easing: 'easeInOutBack'
 	});
-});    
+});
 
 $(".previous").click(function(){
 	if(animating) return false;
